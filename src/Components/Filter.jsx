@@ -4,7 +4,7 @@ import TourIcon from '@mui/icons-material/Tour';
 
 function Filter() {
   return (
-    <div className='flex h-[56px] justify-around text-center border-1 border-gray-100 items-center'>
+    <div className=' h-[56px] justify-around text-center border-1 hidden lg:flex border-gray-100 items-center'>
       <div className='w-3/4 text-center'>
         <ul className='flex gap-16 text-center justify-center pr-10'>
           < MenuIcon className='' />
