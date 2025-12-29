@@ -1,48 +1,51 @@
-import React from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
-import TourIcon from '@mui/icons-material/Tour';
+import { Menu, ChevronDown } from "lucide-react";
 
-function Filter() {
+export default function TopBar() {
   return (
-    <div className=' h-[56px] justify-around text-center border-1 hidden lg:flex border-gray-100 items-center'>
-      <div className='w-3/4 text-center'>
-        <ul className='flex gap-16 text-center justify-center pr-10'>
-          < MenuIcon className='' />
-          <li>All Categories</li>
-          <li>Hot Offers</li>
-          <li>Gift Box</li>
-          <li>Projects</li>
-          <li>Menu Items</li>
-          <select>
-            <option value="Help">Help</option>
-            <option value="Help">Help</option>
-            <option value="Help">Help</option>
-            <option value="Help">Help</option>
-          </select>
-        </ul>
-      </div>
+    <div className="hidden md:block w-full border-y border-gray-200  bg-white  text-sm">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="h-10 flex items-center justify-between mx-6">
+          {/* Left */}
+          <div className="flex items-center ml-[-20px] gap-5 text-gray-700">
+            <div className="flex items-center gap-1 cursor-pointer">
+              <Menu size={16} />
+              <span>All category</span>
+            </div>
 
-      <div className='flex gap-8 w-1/4'>
-        <div>
+            <span className="cursor-pointer">Hot offers</span>
+            <span className="cursor-pointer">Gift boxes</span>
+            <span className="cursor-pointer">Projects</span>
 
-         English, 
-         <select>
-          <option value="USD">USD</option>
-          <option value="PKR">PKR</option>
-         </select>
-        </div>
+            <div className="flex items-center gap-1 cursor-pointer">
+              <span>Menu item</span>
+              <ChevronDown size={14} />
+            </div>
 
-        <div>
-         Shipto
-          <TourIcon />
-          <select>
-            <option value="UAE">UAE</option>
-            <option value="PAK">PAK</option>
-          </select>
+            <span className="cursor-pointer">Help</span>
+          </div>
+
+          {/* Right */}
+          <div className="flex items-center gap-6 text-gray-700">
+            <div className="flex items-center gap-1 cursor-pointer">
+              <select name="language" id="">
+                <option value="English">Eng</option>
+                <option value="Urdu">Ur</option>
+              </select>
+              
+            </div>
+
+            <div className="flex items-center gap-1 cursor-pointer">
+              <span>Ship to</span>
+              <img src="https://flagcdn.com/w20/pk.png" alt="" />
+              <select name="country" id="">
+                <option value="Spain"></option>
+              </select>
+              
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Filter
