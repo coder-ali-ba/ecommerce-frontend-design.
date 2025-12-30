@@ -11,6 +11,16 @@ import camera from "../assets/260c7a4b2c0a4a3071479d3ea04dbef308c19301.png";
 import TopBar from "../Components/Filter";
 import bgImage from "../assets/Banner-board-800x420 2.png";
 import AccountCircleTwoToneIcon from "@mui/icons-material/AccountCircleTwoTone";
+import home from "../assets/e569161444be4cfea24366cb3d27cb335105ed84.jpg";
+import chair from "../assets/4450cf999324f0c42ef6175c1e8fd94fcdaea111.png";
+import vase from "../assets/e7609aa3afe3483e736054358d53f2f8797b4546.png";
+import pot from "../assets/a542fa1c1ebac249f8cba9ff49b0a3c5c89dfbc7.png";
+import bed from "../assets/de013dbdda0ec19b2f735896bd129bb83cae628f.png";
+import mix from "../assets/67ecd6b2d628afe6f0f52ecee5cf9460f0d0d69d.png";
+import blend from "../assets/649567d50c25ac335a1e2cc7d8d3584a3592fbbf.png";
+import tab from "../assets/a3565d31ff34eb5b476f6a97fc3fde243beb9597.jpg";
+import phol from "../assets/37fcfe74e17c636fb7cc35743a81e426e6e52604.png";
+import music from '../assets/2899a4374c8412945ece65003461e7d1b12857d0.png'
 
 function HomePage() {
   return (
@@ -21,7 +31,7 @@ function HomePage() {
       <div className="w-full bg-gray-300 pt-4  pb-4">
         {/* HERO SECTION */}
         <div className="flex items-center justify-center ">
-          <div className="bg-white w-full lg:w-[90%] mr-3 md:p-2 h-[400px] flex">
+          <div className="bg-white w-full lg:w-[90%] lg:mr-3 md:p-2 h-[400px] flex">
             <div className="w-[20%] lg:w-[22%] h-full bg-white hidden md:flex justify-center items-center">
               <ul className="flex flex-col lg:gap-3 text-gray-500 w-[100%]">
                 <li className="hover:bg-[#E5F1FF] pl-2 rounded-md py-1 w-[90%]">
@@ -100,7 +110,7 @@ function HomePage() {
         </div>
 
         {/* Deals And Offers */}
-        <div className="w-full lg:w-[91%] pr-3 mt-4 m-auto ">
+        <div className="w-full lg:w-[91%] lg:pr-3 mt-4 m-auto ">
           <div className="bg-white border  border-gray-300 w-full h-[300px] md:h-[240px]  md:flex overflow-hidden">
             {/* LEFT SECTION */}
             <div
@@ -164,7 +174,372 @@ function HomePage() {
           </div>
         </div>
 
-        
+        {/* Home ANd OutDOORS */}
+        <div className="bg-white  w-full lg:w-[89.8%] md:h-[254px] lg:ml-16 mt-4 md:flex overflow-hidden flex-none">
+          <div
+            className="md:w-[275px] md:h-full pl-6 pt-4  pb-2 `]    flex-none "
+            style={{
+              backgroundImage: `url(${home})`,
+              backgroundSize: "cover",
+            }}
+          >
+            <h1 className="font-bold text-xl">
+              {" "}
+              Home and <br className="hidden md:block" /> outdoor{" "}
+            </h1>
+            <button className="bg-white cursor-pointer px-4 py-2 hidden md:block rounded-md mt-4">
+              {" "}
+              Source now{" "}
+            </button>
+          </div>
+
+          <div className="overflow-x-auto scrollbar-hide max-[768px]:flex">
+            <div className=" flex">
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={chair}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={chair}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={vase}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={vase}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={pot}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={pot}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={bed}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={bed}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className=" flex">
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={mix}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={mix}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={blend}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={blend}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={tab}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={tab}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={phol}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={phol}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button className="bg-white px-4 py-2  md:hidden rounded-md mt-4 text-blue-600">
+            {" "}
+            Source now =>{" "}
+          </button>
+        </div>
+
+        {/* Consumer Electronics */}
+
+        <div className="bg-white  w-full lg:w-[89.8%] md:h-[254px] lg:ml-16 mt-4 md:flex overflow-hidden flex-none">
+          <div
+            className="md:w-[275px] md:h-full pl-6 pt-4  pb-2 `]    flex-none "
+            style={{
+              backgroundImage: `url(${music})`,
+              backgroundSize: "cover",
+            }}
+          >
+            <h1 className="font-bold text-xl">              
+              Consumer <br className="hidden md:block"/> electronics and <br className="hidden md:block"/> gadgets
+            </h1>
+            <button className="bg-white cursor-pointer px-4 py-2 hidden md:block rounded-md mt-4">
+              Source now
+            </button>
+          </div>
+
+          <div className="overflow-x-auto scrollbar-hide max-[768px]:flex">
+            <div className=" flex">
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={watch}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={watch}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={camera}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={camera}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={pot}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={pot}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={bed}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={bed}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className=" flex">
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={mix}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={mix}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={blend}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={blend}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={tab}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={tab}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="w-[140px] md:w-[235px] md:h-[127px] pb-3 flex flex-col items-center border md:block border-gray-300 pl-2 pt-2 pr-2">
+                <img
+                  src={phol}
+                  className="w-[66px] h-[69px] mt-2 md:hidden"
+                  alt=""
+                />
+                <p className="text-xl">Soft Chairs</p>
+                <div className="flex justify-between mt-1">
+                  <p className="text-xl text-gray-500">
+                    From <br className="hidden md:flex" />
+                    USD 19
+                  </p>
+                  <img
+                    src={phol}
+                    className="w-[66px] h-[69px] hidden md:flex mt-2"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button className="bg-white px-4 py-2  md:hidden rounded-md mt-4 text-blue-600">
+            {" "}
+            Source now =>
+          </button>
+        </div>
       </div>
     </>
   );
