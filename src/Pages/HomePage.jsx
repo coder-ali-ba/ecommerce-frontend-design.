@@ -20,7 +20,21 @@ import mix from "../assets/67ecd6b2d628afe6f0f52ecee5cf9460f0d0d69d.png";
 import blend from "../assets/649567d50c25ac335a1e2cc7d8d3584a3592fbbf.png";
 import tab from "../assets/a3565d31ff34eb5b476f6a97fc3fde243beb9597.jpg";
 import phol from "../assets/37fcfe74e17c636fb7cc35743a81e426e6e52604.png";
-import music from '../assets/2899a4374c8412945ece65003461e7d1b12857d0.png'
+import music from "../assets/2899a4374c8412945ece65003461e7d1b12857d0.png";
+import shirt from '../assets/66ac8758b171e503e38e7b8c0a5fa03996d5d467.png'
+import ind from '../assets/b564a957ce3a966c5d76f6c21ddcaeba336dd251.png'
+import SearchIcon from '@mui/icons-material/Search';
+import cols from '../assets/4b08c60c3829236b56ad902eb0d7bc9954d83888.png'
+import plane from '../assets/1d9d9dbe3e097f229ff7711c3aefb5b0673a2278.png'
+import mon from '../assets/0c52058c7fecb736fb193ed3a0a046668cf87a58.png'
+import InventoryIcon from '@mui/icons-material/Inventory';
+import SendIcon from '@mui/icons-material/Send';
+import SecurityIcon from '@mui/icons-material/Security';
+import RegionSuppliers from "../Components/RegionSuppliers";
+import Subscribe from "../Components/Subscribe";
+import Footer from "../Components/Footer";
+
+
 
 function HomePage() {
   return (
@@ -368,8 +382,9 @@ function HomePage() {
               backgroundSize: "cover",
             }}
           >
-            <h1 className="font-bold text-xl">              
-              Consumer <br className="hidden md:block"/> electronics and <br className="hidden md:block"/> gadgets
+            <h1 className="font-bold text-xl">
+              Consumer <br className="hidden md:block" /> electronics and{" "}
+              <br className="hidden md:block" /> gadgets
             </h1>
             <button className="bg-white cursor-pointer px-4 py-2 hidden md:block rounded-md mt-4">
               Source now
@@ -536,10 +551,157 @@ function HomePage() {
             </div>
           </div>
           <button className="bg-white px-4 py-2  md:hidden rounded-md mt-4 text-blue-600">
-            {" "}
             Source now =>
           </button>
         </div>
+
+        {/* Send Quotes SECT */}
+        <div className="flex justify-center mt-4 w-full ">
+          <div className="bg-gradient-to-r from-[#2C7CF1] to-[#00D1FF80] w-full lg:w-[90%] lg:mr-3   h-[446px] flex justify-between items-center">
+            <div className="h-[290px] flex ml-[40px] items-start">
+              <div>
+                <h1 className="text-3xl font-bold text-white">
+                  An easy way to send <br /> requests to all suppliers
+                </h1>
+                <p className="mt-4 text-gray-100">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing <br />{" "}
+                  elit. Possimus, voluptate odio. Iste, dignissimos.
+                </p>
+                <button className="bg-[#127FFF] mt-3 cursor-pointer  md:hidden text-white px-4
+                py-2 rounded-md">Send inquiry</button>
+              </div>
+            </div>
+            <div className="hidden md:block">
+              <div className="lg:w-[491px]  md:w-[350px] h-[346px] mr-[40px] rounded-md p-4 bg-white">
+                <h1 className="text-2xl font-bold mt-2">Send quotes to suppliers</h1>
+                <input type="text" placeholder="What item you need?" className="h-[40px] w-[90%] border border-gray-300 pl-3 mt-4 rounded-md text-xl text-black" />
+                <textarea name="" className=" h-[73px] w-[90%] border border-gray-300 pl-3 mt-4 rounded-md text-xl text-black" id="" placeholder="Type for more detail"></textarea>
+                <div
+                className="flex gap-2">
+                   <div className="w-[206px] h-[40px] text-center pt-1.5 mt-3 rounded-md border border-gray-300">Quantity</div>
+                <select name="quantity" className="h-[40px] w-[111px] border border-gray-300 rounded-md mt-3 pl-3 pr-3" id="">
+                  <option value="Pcs">Pcs</option>
+                </select>
+                </div>
+                <button className="bg-[#127FFF] mt-4 cursor-pointer  text-white px-4
+                py-2 rounded-md">Send inquiry</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* RECOMMENDED ITEMS */}
+        <div className="flex justify-center mt-4 pb-2 w-full">
+          <div className=" w-full lg:w-[90%] lg:pt-3 lg:pb-3 lg:mr-3 ">
+            <h1 className="text-xl font-bold">Recommended Items</h1>
+            <div className="flex w-full gap-4 justify-center mt-2 md:justify-between flex-wrap">
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+            
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+              <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
+                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* OUR EXTRA SERVICES */}
+        <h1 className="hidden md:block text-xl font-bold lg:ml-18 mt-3">Our extra services</h1>
+        <div className="hidden  md:flex justify-center mt-4 w-full bg-gray-300"> 
+
+          <div className="flex  md:justify-around lg:justify-between flex-wrap w-full gap-2 lg:w-[90%] xl:h-[256px] lg:mr-3">
+            <div>
+              <div className="w-[280px] h-[200px] bg-white rounded-md">
+                <img src={ind} className="w-full h-[65%] rounded-t-md" alt="" />
+                <p className="text-md ml-6 mt-2"> Source from <br /> Industry Hubs</p>
+                <div className="flex justify-center items-center w-[55px] h-[55px] bg-[#D1E7FF] rounded-full border-3 border-white relative bottom-20 left-48">
+                  <SearchIcon fontSize="large" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="w-[280px] h-[200px] bg-white rounded-md">
+                <img src={cols} className="w-full h-[65%] rounded-t-md" alt="" />
+                <p className="text-md ml-6 mt-2"> Source from <br /> Industry Hubs</p>
+                <div className="flex justify-center items-center w-[55px] h-[55px] bg-[#D1E7FF] rounded-full border-3 border-white relative bottom-20 left-48">
+                  <InventoryIcon fontSize="large" />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="w-[280px] h-[200px] bg-white rounded-md">
+                <img src={plane} className="w-full h-[65%] rounded-t-md" alt="" />
+                <p className="text-md ml-6 mt-2"> Source from <br /> Industry Hubs</p>
+                <div className="flex justify-center items-center w-[55px] h-[55px] bg-[#D1E7FF] rounded-full border-3 border-white relative bottom-20 left-48">
+                  <SendIcon fontSize="large"/>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="w-[280px] h-[200px] bg-white rounded-md">
+                <img src={mon} className="w-full h-[65%] rounded-t-md" alt="" />
+                <p className="text-md ml-6 mt-2"> Source from <br /> Industry Hubs</p>
+                <div className="flex justify-center items-center w-[55px] h-[55px] bg-[#D1E7FF] rounded-full border-3 border-white relative bottom-20 left-48">
+                  <SecurityIcon />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+ 
+        <RegionSuppliers />
+        <Subscribe />
+        <Footer />
+
       </div>
     </>
   );
