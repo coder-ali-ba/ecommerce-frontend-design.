@@ -4,6 +4,7 @@ import Filter from './Components/Filter'
 import Navbar from './Components/Navbar'
 import './index.css'
 import HomePage from './Pages/HomePage'
+import ListPage from './Pages/ListPage'
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
     <>
      <Routes>
       <Route path='/' element={<HomePage />}></Route>
+      <Route path='/list' element={<ListPage/>}></Route>
      </Routes>
     </>
   )

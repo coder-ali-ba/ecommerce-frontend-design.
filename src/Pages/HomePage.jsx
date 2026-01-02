@@ -33,6 +33,12 @@ import SecurityIcon from '@mui/icons-material/Security';
 import RegionSuppliers from "../Components/RegionSuppliers";
 import Subscribe from "../Components/Subscribe";
 import Footer from "../Components/Footer";
+import COAT from '../assets/a14ab6ac18aa7b0da8ec069e90fab9443221e2f2.jpg'
+import JAC from '../assets/b720dd65fcc6274edfb7e97f682185ec460b6d4f.png'
+import POCK from '../assets/3e0d988a895e1e83befccaeafc962783f0de80c5.png'
+import BAG from '../assets/deea14d78e68b15c28eb29234224b8b2f71d5eb5.png'
+import JEANS from '../assets/8ef134a2fbdc1fec81bd703736016e62fddab16b.png'
+import HEAD from '../assets/37220adadb935c4b51e951193ddd1064f61e7b77.png'
 
 
 
@@ -42,7 +48,7 @@ function HomePage() {
       <Navbar />
       <TopBar />
 
-      <div className="w-full bg-gray-300 pt-4  pb-4">
+      <div className="w-full bg-gray-300 pt-4 ">
         {/* HERO SECTION */}
         <div className="flex items-center justify-center ">
           <div className="bg-white w-full lg:w-[90%] lg:mr-3 md:p-2 h-[400px] flex">
@@ -601,43 +607,43 @@ function HomePage() {
                 <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
               </div>
               <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
-                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <img src={COAT} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
                 <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
-                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">Jeans shorts for menblue color</p>
               </div>
               <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
-                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <img src={JAC} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
                 <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
-                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">Brown winter coatmedium size</p>
               </div>
               <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
-                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <img src={POCK} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
                 <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
-                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">Leather wallet</p>
               </div>
               <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
-                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <img src={BAG} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
                 <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
-                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">Jeans bag for travelfor men</p>
               </div>
             
               <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
-                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <img src={JEANS} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
                 <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
                 <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
               </div>
               <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
-                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <img src={HEAD} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
                 <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
-                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">Headset for gamingwith mic</p>
               </div>
               <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
-                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <img src={BAG} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
                 <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
-                <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
+                <p className="text-lg mt-2 text-gray-500 ml-4">Smartwatchsilver color modern</p>
               </div>
               <div className="w-[220px] h-[310px] bg-white border-2 rounded-md border-gray-200">
-                <img src={shirt} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
+                <img src={pot} className="w-[150px] h-[170px] m-auto mt-4" alt="" />
                 <p className="font-bolder ml-4 text-xl mt-6">$10.30</p>
                 <p className="text-lg mt-2 text-gray-500 ml-4">T-shirts with multiple colors,for men</p>
               </div>
@@ -649,6 +655,7 @@ function HomePage() {
             </div>
           </div>
         </div>
+      
 
         {/* OUR EXTRA SERVICES */}
         <h1 className="hidden md:block text-xl font-bold lg:ml-18 mt-3">Our extra services</h1>
@@ -703,8 +710,10 @@ function HomePage() {
         <Footer />
 
       </div>
+      
     </>
   );
 }
+
 
 export default HomePage;
