@@ -8,6 +8,7 @@ function ListSideBar() {
   const [openFeatures, setOpenFeatures] = useState(true);
   const [openRange, setOpenRange] = useState(true);
   const [openCondition , setOpenCondition] = useState(true)
+  const [openRating , setOpenRating] = useState(true)
 
   const [min, setMin] = useState(200);
   const [max, setMax] = useState(999999);
@@ -154,7 +155,7 @@ function ListSideBar() {
                 <div className="bg-white px-3 py-1 w-[111px] h-[40px] flex items-center rounded-md border border-gray-300">{max}</div>
               </div>
             </div>
-            <button className="bg-white w-[228px] h-[40px] rounded-md border border-gray-300 mt-2 text-blue-600">Apply</button>
+            <button className="bg-white w-[228px] h-[40px] rounded-md border border-gray-300 mt-2 text-blue-600 cursor-pointer">Apply</button>
           </div>
         )}
       </div>
@@ -181,6 +182,48 @@ function ListSideBar() {
             </ul>
           )}
         
+      </div>
+
+      <div>
+        <div className="flex justify-between" onClick={() =>setOpenRating(!openRating)}>
+          <h1>Rating</h1>
+          <KeyboardArrowUpIcon
+            className={`transition-transform duration-300 ${
+              openRating ? "rotate-0" : "rotate-180"
+            }` }
+          />
+          </div>
+          { openRating && (
+            <div>
+  <label className="text-yellow-400 flex items-center gap-2">
+    <input type="radio" name="rate" value="5" />
+    ★ ★ ★ ★ ★
+  </label>
+
+  <label className="text-yellow-400 flex items-center gap-2">
+    <input type="radio" name="rate" value="4" />
+    ★ ★ ★ ★
+  </label>
+
+  <label className="text-yellow-400 flex items-center gap-2">
+    <input type="radio" name="rate" value="3" />
+    ★ ★ ★
+  </label>
+
+  <label className="text-yellow-400 flex items-center gap-2">
+    <input type="radio" name="rate" value="2" />
+    ★ ★
+  </label>
+
+  <label className="text-yellow-400 flex items-center gap-2">
+    <input type="radio" name="rate"  value="1" />
+    ★
+  </label>
+</div>
+
+          )}
+        
+
       </div>
 
       
