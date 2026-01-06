@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-function ListSideBar() {
+
+function ListSideBar({setData}) {
   const [open, setOpen] = useState(true);
   const [openBrand, setopenBrand] = useState(true);
   const [openFeatures, setOpenFeatures] = useState(true);
   const [openRange, setOpenRange] = useState(true);
-  const [openCondition , setOpenCondition] = useState(true)
-  const [openRating , setOpenRating] = useState(true)
+  const [openCondition, setOpenCondition] = useState(true);
+  const [openRating, setOpenRating] = useState(true);
 
   const [min, setMin] = useState(200);
   const [max, setMax] = useState(999999);
 
   const MIN_LIMIT = 0;
   const MAX_LIMIT = 999;
+
+
+ 
+
+
+
+
+  
+
+
+
   return (
     <div className="w-[240px]   hidden md:block mb-4">
       <div className=" border-y-1 border-gray-400 pt-4 pb-4">
@@ -46,7 +58,7 @@ function ListSideBar() {
           className="flex justify-between  cursor-pointer "
           onClick={() => setopenBrand(!openBrand)}
         >
-          <h3 className="font-semibold">Category</h3>
+          <h3 className="font-semibold">Brands</h3>
           <KeyboardArrowUpIcon
             className={`transition-transform duration-300 ${
               openBrand ? "rotate-0" : "rotate-180"
@@ -56,10 +68,41 @@ function ListSideBar() {
 
         {openBrand && (
           <ul className="mt-2 space-y-3 text-gray-700">
-            <li>Mobile accessory</li>
-            <li>Electronics</li>
-            <li>Smartphones</li>
-            <li>Modern tech</li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" onClick={()=>setData("Samsung")}/>
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Samsung</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" onClick={()=>setData("Apple")}/>
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Apple</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" onClick={()=>setData("Huawei")}/>
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Huawei</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" onClick={()=>setData("Pocco")}/>
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Pocco</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" onClick={()=>setData("Lenovo")}/>
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Lenovo</p>
+            </li>
             <li className="text-blue-500 cursor-pointer">See all</li>
           </ul>
         )}
@@ -70,7 +113,7 @@ function ListSideBar() {
           className="flex justify-between  cursor-pointer "
           onClick={() => setOpenFeatures(!openFeatures)}
         >
-          <h3 className="font-semibold">Category</h3>
+          <h3 className="font-semibold">Features</h3>
           <KeyboardArrowUpIcon
             className={`transition-transform duration-300 ${
               openFeatures ? "rotate-0" : "rotate-180"
@@ -80,10 +123,41 @@ function ListSideBar() {
 
         {openFeatures && (
           <ul className="mt-2 space-y-3 text-gray-700">
-            <li>Mobile accessory</li>
-            <li>Electronics</li>
-            <li>Smartphones</li>
-            <li>Modern tech</li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Metallic</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Plastic cover</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">8GB Ram</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Super power</p>
+            </li>
+            <li className="flex items-center gap-3">
+              <label className="custom-radio">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+              </label>
+              <p className="mt-[-7px]">Large memory</p>
+            </li>
             <li className="text-blue-500 cursor-pointer">See all</li>
           </ul>
         )}
@@ -148,18 +222,24 @@ function ListSideBar() {
             <div className="flex justify-between gap-2 text-sm text-gray-600 mt-3">
               <div>
                 <div>Min</div>
-                <div className="bg-white px-3 py-1 w-[111px] h-[40px] flex items-center rounded-md border border-gray-300">{min}</div>
+                <div className="bg-white px-3 py-1 w-[111px] h-[40px] flex items-center rounded-md border border-gray-300">
+                  {min}
+                </div>
               </div>
               <div>
                 <div>Max</div>
-                <div className="bg-white px-3 py-1 w-[111px] h-[40px] flex items-center rounded-md border border-gray-300">{max}</div>
+                <div className="bg-white px-3 py-1 w-[111px] h-[40px] flex items-center rounded-md border border-gray-300">
+                  {max}
+                </div>
               </div>
             </div>
-            <button className="bg-white w-[228px] h-[40px] rounded-md border border-gray-300 mt-2 text-blue-600 cursor-pointer">Apply</button>
+            <button className="bg-white w-[228px] h-[40px] rounded-md border border-gray-300 mt-2 text-blue-600 cursor-pointer">
+              Apply
+            </button>
           </div>
         )}
       </div>
-      
+
       <div className=" pt-4 pb-4 border-y-1 border-gray-400">
         <div
           className="flex justify-between  cursor-pointer "
@@ -172,62 +252,75 @@ function ListSideBar() {
             }`}
           />
         </div>
-          {openCondition && (
-            <ul className="mt-2 space-y-3 text-gray-700">
-              <li><input type="radio" name="condition" className="bg-blue-800"/> Any</li>
-              <li><input type="radio" name="condition" /> Refurbished</li>
-              <li><input type="radio" name="condition" /> Brand New</li>
-              <li><input type="radio" name="condition"/> Old items</li>
-              <li className="text-blue-500 cursor-pointer">See all</li>
-            </ul>
-          )}
-        
+        {openCondition && (
+          <ul className="mt-2 space-y-3 text-gray-700">
+            <li>
+              <input type="radio" name="condition" className="bg-blue-800" />{" "}
+              Any
+            </li>
+            <li>
+              <input type="radio" name="condition" /> Refurbished
+            </li>
+            <li>
+              <input type="radio" name="condition" /> Brand New
+            </li>
+            <li>
+              <input type="radio" name="condition" /> Old items
+            </li>
+            <li className="text-blue-500 cursor-pointer">See all</li>
+          </ul>
+        )}
       </div>
 
-      <div>
-        <div className="flex justify-between" onClick={() =>setOpenRating(!openRating)}>
-          <h1>Rating</h1>
+      <div className="border-y-1 pt-4 pb-4  border-gray-400">
+        <div
+          className="flex justify-between "
+          onClick={() => setOpenRating(!openRating)}
+        >
+          <h1 className="font-semibold ">Rating</h1>
           <KeyboardArrowUpIcon
             className={`transition-transform duration-300 ${
               openRating ? "rotate-0" : "rotate-180"
-            }` }
+            }`}
           />
-          </div>
-          { openRating && (
+        </div>
+        {openRating && (
+          <div>
             <div>
-  <label className="text-yellow-400 flex items-center gap-2">
-    <input type="radio" name="rate" value="5" />
-    ★ ★ ★ ★ ★
-  </label>
-
-  <label className="text-yellow-400 flex items-center gap-2">
-    <input type="radio" name="rate" value="4" />
-    ★ ★ ★ ★
-  </label>
-
-  <label className="text-yellow-400 flex items-center gap-2">
-    <input type="radio" name="rate" value="3" />
-    ★ ★ ★
-  </label>
-
-  <label className="text-yellow-400 flex items-center gap-2">
-    <input type="radio" name="rate" value="2" />
-    ★ ★
-  </label>
-
-  <label className="text-yellow-400 flex items-center gap-2">
-    <input type="radio" name="rate"  value="1" />
-    ★
-  </label>
-</div>
-
-          )}
-        
-
+              <label className="custom-radio">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+                <span className="ml-3 text-[#FF9017] text-xl"> ★ ★ ★ ★ ★</span>
+                <span className=" text-gray-400 text-xl"> </span>
+              </label>
+            </div>
+            <div>
+              <label className="custom-radio">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+                <span className="ml-3 text-[#FF9017] text-xl"> ★ ★ ★ ★</span>
+                <span className=" text-gray-400 text-xl"> ★ </span>
+              </label>
+            </div>
+            <div>
+              <label className="custom-radio">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+                <span className="ml-3 text-[#FF9017] text-xl"> ★ ★ ★</span>
+                <span className=" text-gray-400 text-xl"> ★ ★ </span>
+              </label>
+            </div>
+            <div>
+              <label className="custom-radio flex items-center ">
+                <input type="radio" name="option" />
+                <span className="box"></span>
+                <span className="ml-3 text-[#FF9017] text-xl"> ★ ★</span>
+                <span className=" text-gray-400 text-xl"> ★ ★ ★ </span>
+              </label>
+            </div>
+          </div>
+        )}
       </div>
-
-      
-
     </div>
   );
 }

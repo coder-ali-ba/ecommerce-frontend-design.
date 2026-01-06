@@ -2,6 +2,22 @@
   display: none; 
 }
 
+.custom-radio input {
+  display: none;
+}
+
+.custom-radio .box {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #BDBDBD;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.custom-radio input:checked + .box {
+  background-color:rgb(84, 84, 241);
+}
 /* .scrollbar-hide {
   -ms-overflow-style: none;  
   scrollbar-width: none;     

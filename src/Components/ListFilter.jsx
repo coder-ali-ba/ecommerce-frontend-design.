@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MenuIcon from '@mui/icons-material/Menu';
 import GridViewIcon from '@mui/icons-material/GridView';
 
 
 function ListFilter() {
+  const [view , setView ] = useState(false)
+  const handleView = () => {
+    setView(!view)
+    
+  }
+
   return (
     <div className='h-[62px] p-3 rounded-md w-full  flex items-center justify-between bg-white border border-gray-200'>
       <p>12,911 items in <span className='font-bold'>Mobile accessory</span></p>
@@ -18,9 +24,12 @@ function ListFilter() {
             </select>
         </div>
         <div className='flex items-center ring-1 rounded-md p-2'>
-           <MenuIcon />
-           
+          <div className='cursor-pointer'>
+           <MenuIcon/>
+          </div>
+           <div className='cursor-pointer'>
            <GridViewIcon />
+           </div>
         </div>
       </div>
     </div>
