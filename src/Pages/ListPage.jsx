@@ -8,6 +8,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import GridViewIcon from "@mui/icons-material/GridView";
 import ListView from "../Components/ListView";
 import GridView from "../Components/GridView";
+import ClearIcon from '@mui/icons-material/Clear';
+
 
 
 function ListPage() {
@@ -15,11 +17,22 @@ function ListPage() {
   const handleView = () => {
     setView(!view);
   };
-
+          //  SET BRANDS
    const [brandName , setName ] = useState("")
+   const [brandApple , setBrandApple ] = useState("")
+   const [brandHuawei , setBrandHuawei ] = useState("")
+   const [brandPocco , setBrandPocco ] = useState("")
+   const [brandLenovo , setBrandLenovo ] = useState("")
+    
+         //SET FEATURES
   
+   const[featMetallic , setFeatMetallic] = useState("")
+   const[featPlastic , setFeatPlastic] = useState("")
+   const[featRam , setFeatRam] = useState("")
+   const[featPower , setFeatPower] = useState("")
+   const[featMemory , setFeatMemory] = useState("")
    
- console.log(brandName);
+
  
 
 
@@ -30,7 +43,18 @@ function ListPage() {
         <TopBar />
         <ListBar />
         <div className="w-full bg-gray-200 lg:w-[90%]  mt-3 m-auto flex gap-4">
-          <ListSideBar setData={setName}/>
+          <ListSideBar 
+          setData={setName} 
+          setApp={setBrandApple} 
+          setHuawei={setBrandHuawei} 
+          setPocco={setBrandPocco} 
+          setLenovo={setBrandLenovo}
+          setMetallic={setFeatMetallic}
+          setPlastic={setFeatPlastic}
+          setRam={setFeatRam}
+          setPower={setFeatPower}
+          setMemory={setFeatMemory}
+          />
           <div className=" w-full">
             <div className="h-[62px] p-3 rounded-md w-full  flex items-center justify-between bg-white border border-gray-200">
               <p>
@@ -62,11 +86,96 @@ function ListPage() {
               </div>
             </div>
 
-            <div className="h-[32px] w-[90%] border">
-              <p>{brandName}</p>
+
+             {/* UPPER FILTERS DESC */}
+            <div className=" w-[90%] mt-4  mb-4 hidden md:flex flex-wrap items-center gap-4">
+              { brandName && 
+                              <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{brandName}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }  
+              {
+                brandApple && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{brandApple}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }      
+
+              {
+                brandHuawei && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{brandHuawei}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }    
+
+              {
+                brandPocco && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{brandPocco}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }   
+
+              {
+                brandLenovo && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{brandLenovo}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }      
+              {
+                featMetallic && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{featMetallic}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }  
+              {
+                featPlastic && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{featPlastic}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }  
+              {
+                featRam && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{featRam}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              } 
+              {
+                featPower && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{featPower}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }   
+              {
+                featMemory && 
+                <div className="flex items-center h-full justify-between  border w-fit px-2 border-blue-500 rounded ">
+                   <p className="">{featMemory}</p>
+                   <p><ClearIcon fontSize="small" className="pb-1 "/></p>
+                 </div>
+                 
+              }            
             </div>
 
-            <div className="w-full h-[400px] border">
+
+
+            <div className="w-full  ">
               {view ? <ListView /> : <GridView />}
             </div>
           </div>

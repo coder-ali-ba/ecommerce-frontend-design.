@@ -1,9 +1,19 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
-
-function ListSideBar({setData}) {
+function ListSideBar({
+  setData,
+  setApp,
+  setHuawei,
+  setPocco,
+  setLenovo,
+  setMetallic,
+  setPlastic,
+  setRam,
+  setPower,
+  setMemory,
+}) {
   const [open, setOpen] = useState(true);
   const [openBrand, setopenBrand] = useState(true);
   const [openFeatures, setOpenFeatures] = useState(true);
@@ -17,15 +27,88 @@ function ListSideBar({setData}) {
   const MIN_LIMIT = 0;
   const MAX_LIMIT = 999;
 
+  //  BRANDS
+  const handleSamsung = (e) => {
+    if (e.target.checked) {
+      setData("Samsung");
+    } else {
+      setData("");
+    }
+  };
 
- 
+  const handleApple = (e) => {
+    if (e.target.checked) {
+      setApp("Apple");
+    } else {
+      setApp("");
+    }
+  };
 
+  const handlehuawei = (e) => {
+    if (e.target.checked) {
+      setHuawei("Huawei");
+    } else {
+      setHuawei("");
+    }
+  };
 
+  const handlePocco = (e) => {
+    if (e.target.checked) {
+      setPocco("Pocco");
+    } else {
+      setPocco("");
+    }
+  };
 
+  const handleLenovo = (e) => {
+    if (e.target.checked) {
+      setLenovo("Lenovo");
+    } else {
+      setLenovo("");
+    }
+  };
 
-  
+  //FEATURES
 
+  const handleMetallic = (e) => {
+    if (e.target.checked) {
+      setMetallic("Metallic");
+    } else {
+      setMetallic("");
+    }
+  };
 
+  const handlePlastic = (e) => {
+    if (e.target.checked) {
+      setPlastic("Plastic Cover");
+    } else {
+      setPlastic("");
+    }
+  };
+
+  const handleRam = (e) => {
+    if (e.target.checked) {
+      setRam("8GB Ram");
+    } else {
+      setRam("");
+    }
+  };
+
+  const handlePower = (e) => {
+    if (e.target.checked) {
+      setPower("Super power");
+    } else {
+      setPower("");
+    }
+  };
+
+  const handleMemory = (e) => {
+    if (e.target.checked) {
+      setMemory("Large memory");
+    } else {
+      setMemory("");
+    }
+  };
 
   return (
     <div className="w-[240px]   hidden md:block mb-4">
@@ -52,7 +135,7 @@ function ListSideBar({setData}) {
           </ul>
         )}
       </div>
-
+      {/* BRAND */}
       <div className="  border-y-1 border-gray-400 pt-4 pb-4">
         <div
           className="flex justify-between  cursor-pointer "
@@ -69,45 +152,30 @@ function ListSideBar({setData}) {
         {openBrand && (
           <ul className="mt-2 space-y-3 text-gray-700">
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" onClick={()=>setData("Samsung")}/>
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handleSamsung} />
               <p className="mt-[-7px]">Samsung</p>
             </li>
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" onClick={()=>setData("Apple")}/>
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handleApple} />
               <p className="mt-[-7px]">Apple</p>
             </li>
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" onClick={()=>setData("Huawei")}/>
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handlehuawei} />
               <p className="mt-[-7px]">Huawei</p>
             </li>
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" onClick={()=>setData("Pocco")}/>
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handlePocco} />
               <p className="mt-[-7px]">Pocco</p>
             </li>
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" onClick={()=>setData("Lenovo")}/>
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handleLenovo} />
               <p className="mt-[-7px]">Lenovo</p>
             </li>
             <li className="text-blue-500 cursor-pointer">See all</li>
           </ul>
         )}
       </div>
-
+      {/* FEATURES */}
       <div className=" border-y-1 border-gray-400 pt-4 pb-4">
         <div
           className="flex justify-between  cursor-pointer "
@@ -124,38 +192,23 @@ function ListSideBar({setData}) {
         {openFeatures && (
           <ul className="mt-2 space-y-3 text-gray-700">
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" />
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handleMetallic} />
               <p className="mt-[-7px]">Metallic</p>
             </li>
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" />
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handlePlastic} />
               <p className="mt-[-7px]">Plastic cover</p>
             </li>
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" />
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handleRam} />
               <p className="mt-[-7px]">8GB Ram</p>
             </li>
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" />
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handlePower} />
               <p className="mt-[-7px]">Super power</p>
             </li>
             <li className="flex items-center gap-3">
-              <label className="custom-radio">
-                <input type="radio" name="option" />
-                <span className="box"></span>
-              </label>
+              <input type="checkbox" onClick={handleMemory} />
               <p className="mt-[-7px]">Large memory</p>
             </li>
             <li className="text-blue-500 cursor-pointer">See all</li>
