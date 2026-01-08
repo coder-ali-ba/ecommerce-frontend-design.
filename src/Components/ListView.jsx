@@ -1,28 +1,260 @@
 import React from 'react'
 import mobile from '../assets/01ad73c0a2d288ce5bd52ddfac2945120df5102b.png'
+import { Link } from 'react-router-dom'
+import { Heart } from 'lucide-react'
 
 function ListView() {
   return (
-    <div className='flex h-[230px] w-full border  border-gray-300 rounded-md bg-white'>
-      <div className='w-[20%] h-full '>
-        <img src={mobile} className='w-[95%] h-[90%] mt-3' alt="" />
-      </div>
-      <div className='w-[75%] h-full border pt-3 pl-4'>
-        <p>Canon Cmera EOS 2000, Black 10x zoom</p>
-        <span className='flex gap-4 items-center'><p className='font-bold text-xl'>$998.00</p> <p className='line-through text-gray-500'>$1128.00</p>
-        </span>
-        <div className='flex gap-8'>
-           <span className='flex items-center text-xl'> <p className=' text-yellow-500 pr-1'>★ ★ ★ ★</p> <p className='text-gray-500'>★</p>
-           </span>
-           <ul className='list-disc flex gap-8'>
-            <li>154 Orders</li>
-            <li>Free Shipping</li>
-           </ul>
+    <>
+    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+      
+      {/* Image */}
+      <img
+        src={mobile}
+        alt="product"
+        className="w-24 h-24 md:w-32 md:h-32 md:mt-3 object-cover rounded-lg"
+      />
+
+      {/* Content */}
+      <div className="flex-1">
+        <h2 className="text-sm font-semibold leading-tight">
+          Canon Camera EOS 2000, Black 10x zoom
+        </h2>
+
+        {/* Price */}
+        <div className="flex items-center gap-2 mt-1">
+          <span className="text-red-500 font-bold">$998.00</span>
+          <span className="text-gray-400 line-through text-xs">$1128.00</span>         
         </div>
+
+        {/* Rating */}
+        <div className="flex items-center gap-1 text-xs mt-1">
+          <span className="text-yellow-400">★★★★★</span>
+          <span className="text-gray-500">7.5</span>
+          <span className="text-gray-400">· 154 orders</span>
+        </div>
+        <p className='hidden md:flex'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem et, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem  deserunt aut sequi ad.</p>
+
+        {/* Shipping */}
+        <p className="flex md:hidden text-green-600 text-xs mt-1">Free Shipping</p>
+        <Link className='hidden md:flex text-blue-500 mt-2'>View details</Link>
       </div>
-      <div className='w-[5%] h-full border'></div>
-        
+
+      {/* Wishlist */}
+      <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
+        <Heart size={18} />
+      </button>
     </div>
+
+
+    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+      
+      {/* Image */}
+      <img
+        src={mobile}
+        alt="product"
+        className="w-24 h-24 md:w-32 md:h-32 md:mt-3 object-cover rounded-lg"
+      />
+
+      {/* Content */}
+      <div className="flex-1">
+        <h2 className="text-sm font-semibold leading-tight">
+          Canon Camera EOS 2000, Black 10x zoom
+        </h2>
+
+        {/* Price */}
+        <div className="flex items-center gap-2 mt-1">
+          <span className="text-red-500 font-bold">$998.00</span>
+          <span className="text-gray-400 line-through text-xs">$1128.00</span>         
+        </div>
+
+        {/* Rating */}
+        <div className="flex items-center gap-1 text-xs mt-1">
+          <span className="text-yellow-400">★★★★★</span>
+          <span className="text-gray-500">7.5</span>
+          <span className="text-gray-400">· 154 orders</span>
+        </div>
+        <p className='hidden md:flex'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem et, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem  deserunt aut sequi ad.</p>
+
+        {/* Shipping */}
+        <p className="flex md:hidden text-green-600 text-xs mt-1">Free Shipping</p>
+        <Link className='hidden md:flex text-blue-500 mt-2'>View details</Link>
+      </div>
+
+      {/* Wishlist */}
+      <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
+        <Heart size={18} />
+      </button>
+    </div>
+
+
+    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+      
+      {/* Image */}
+      <img
+        src={mobile}
+        alt="product"
+        className="w-24 h-24 md:w-32 md:h-32 md:mt-3 object-cover rounded-lg"
+      />
+
+      {/* Content */}
+      <div className="flex-1">
+        <h2 className="text-sm font-semibold leading-tight">
+          Canon Camera EOS 2000, Black 10x zoom
+        </h2>
+
+        {/* Price */}
+        <div className="flex items-center gap-2 mt-1">
+          <span className="text-red-500 font-bold">$998.00</span>
+          <span className="text-gray-400 line-through text-xs">$1128.00</span>         
+        </div>
+
+        {/* Rating */}
+        <div className="flex items-center gap-1 text-xs mt-1">
+          <span className="text-yellow-400">★★★★★</span>
+          <span className="text-gray-500">7.5</span>
+          <span className="text-gray-400">· 154 orders</span>
+        </div>
+        <p className='hidden md:flex'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem et, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem  deserunt aut sequi ad.</p>
+
+        {/* Shipping */}
+        <p className="flex md:hidden text-green-600 text-xs mt-1">Free Shipping</p>
+        <Link className='hidden md:flex text-blue-500 mt-2'>View details</Link>
+      </div>
+
+      {/* Wishlist */}
+      <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
+        <Heart size={18} />
+      </button>
+    </div>
+
+
+    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+      
+      {/* Image */}
+      <img
+        src={mobile}
+        alt="product"
+        className="w-24 h-24 md:w-32 md:h-32 md:mt-3 object-cover rounded-lg"
+      />
+
+      {/* Content */}
+      <div className="flex-1">
+        <h2 className="text-sm font-semibold leading-tight">
+          Canon Camera EOS 2000, Black 10x zoom
+        </h2>
+
+        {/* Price */}
+        <div className="flex items-center gap-2 mt-1">
+          <span className="text-red-500 font-bold">$998.00</span>
+          <span className="text-gray-400 line-through text-xs">$1128.00</span>         
+        </div>
+
+        {/* Rating */}
+        <div className="flex items-center gap-1 text-xs mt-1">
+          <span className="text-yellow-400">★★★★★</span>
+          <span className="text-gray-500">7.5</span>
+          <span className="text-gray-400">· 154 orders</span>
+        </div>
+        <p className='hidden md:flex'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem et, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem  deserunt aut sequi ad.</p>
+
+        {/* Shipping */}
+        <p className="flex md:hidden text-green-600 text-xs mt-1">Free Shipping</p>
+        <Link className='hidden md:flex text-blue-500 mt-2'>View details</Link>
+      </div>
+
+      {/* Wishlist */}
+      <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
+        <Heart size={18} />
+      </button>
+    </div>
+
+
+    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+      
+      {/* Image */}
+      <img
+        src={mobile}
+        alt="product"
+        className="w-24 h-24 md:w-32 md:h-32 md:mt-3 object-cover rounded-lg"
+      />
+
+      {/* Content */}
+      <div className="flex-1">
+        <h2 className="text-sm font-semibold leading-tight">
+          Canon Camera EOS 2000, Black 10x zoom
+        </h2>
+
+        {/* Price */}
+        <div className="flex items-center gap-2 mt-1">
+          <span className="text-red-500 font-bold">$998.00</span>
+          <span className="text-gray-400 line-through text-xs">$1128.00</span>         
+        </div>
+
+        {/* Rating */}
+        <div className="flex items-center gap-1 text-xs mt-1">
+          <span className="text-yellow-400">★★★★★</span>
+          <span className="text-gray-500">7.5</span>
+          <span className="text-gray-400">· 154 orders</span>
+        </div>
+        <p className='hidden md:flex'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem et, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem  deserunt aut sequi ad.</p>
+
+        {/* Shipping */}
+        <p className="flex md:hidden text-green-600 text-xs mt-1">Free Shipping</p>
+        <Link className='hidden md:flex text-blue-500 mt-2'>View details</Link>
+      </div>
+
+      {/* Wishlist */}
+      <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
+        <Heart size={18} />
+      </button>
+    </div>
+
+
+    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+      
+      {/* Image */}
+      <img
+        src={mobile}
+        alt="product"
+        className="w-24 h-24 md:w-32 md:h-32 md:mt-3 object-cover rounded-lg"
+      />
+
+      {/* Content */}
+      <div className="flex-1">
+        <h2 className="text-sm font-semibold leading-tight">
+          Canon Camera EOS 2000, Black 10x zoom
+        </h2>
+
+        {/* Price */}
+        <div className="flex items-center gap-2 mt-1">
+          <span className="text-red-500 font-bold">$998.00</span>
+          <span className="text-gray-400 line-through text-xs">$1128.00</span>         
+        </div>
+
+        {/* Rating */}
+        <div className="flex items-center gap-1 text-xs mt-1">
+          <span className="text-yellow-400">★★★★★</span>
+          <span className="text-gray-500">7.5</span>
+          <span className="text-gray-400">· 154 orders</span>
+        </div>
+        <p className='hidden md:flex'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem et, Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus dolorem  deserunt aut sequi ad.</p>
+
+        {/* Shipping */}
+        <p className="flex md:hidden text-green-600 text-xs mt-1">Free Shipping</p>
+        <Link className='hidden md:flex text-blue-500 mt-2'>View details</Link>
+      </div>
+
+      {/* Wishlist */}
+      <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
+        <Heart size={18} />
+      </button>
+    </div>
+
+    
+
+    
+ </>
   )
 }
 
