@@ -12,6 +12,8 @@ import ClearIcon from "@mui/icons-material/Clear";
 import Footer from "../Components/Footer";
 import Subscribe from "../Components/Subscribe";
 import BAG from "../assets/f16c3be367d46067797d63f72c5d238bab2c834f.png";
+import SortIcon from '@mui/icons-material/Sort';
+import FilterAltOutlinedIcon from '@mui/icons-material/FilterAltOutlined';
 
 function ListPage() {
   const [view, setView] = useState(false);
@@ -53,17 +55,17 @@ function ListPage() {
             setMemory={setFeatMemory}
           />
           <div className=" w-full">
-            <div className="hidden  h-[62px] p-3 rounded-md w-full  md:flex items-center justify-between bg-white border border-gray-200">
-              <p>
-                12,911 items in{" "}
+            <div className="  h-[62px] p-3 rounded-md w-full flex items-center justify-between bg-white border border-gray-200">
+              <p className=" hidden md:flex">
+                12,911 items in
                 <span className="font-bold">Mobile accessory</span>
               </p>
               <div className="flex justify-between gap-3">
-                <div className="flex items-center gap-2">
+                <div className="hidden  md:flex items-center gap-2">
                   <input type="checkbox" className="font-bold" />
                   <p>Verified Only</p>
                 </div>
-                <div>
+                <div className="hidden md:flex">
                   <select
                     name="featured"
                     id=""
@@ -72,12 +74,20 @@ function ListPage() {
                     <option value="Featured">Featured</option>
                   </select>
                 </div>
-                <div className="flex items-center ring-1 rounded-md p-2">
-                  <div className="cursor-pointer" onClick={handleView}>
-                    <MenuIcon />
+
+                <div className="flex justify-center gap-2 max-[309px]:pl-0 pl-[20px]  sm:gap-7">
+                  <div className="md:hidden max-[390px]:w-[120px] w-[135px] h-[40px] border text-center border border-gray-500 rounded max-[390px]:text-sm pt-2">Sort : Newest <SortIcon />
                   </div>
-                  <div className="cursor-pointer" onClick={handleView}>
-                    <GridViewIcon />
+                  <div className="md:hidden max-[390px]:w-[95px] w-[135px] h-[40px] text-center pt-2 border border-gray-500 rounded max-[390px]:text-sm">
+                   Filter(3) <FilterAltOutlinedIcon />
+                  </div>
+                  <div className="flex items-center ring-1 rounded-md p-2">
+                    <div className="cursor-pointer" onClick={handleView}>
+                     <MenuIcon />
+                    </div>
+                    <div className="cursor-pointer" onClick={handleView}>
+                     <GridViewIcon />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -174,43 +184,43 @@ function ListPage() {
           </div>
         </div>
 
-        <div className="h-[220px] w-full   flex md:hidden items-center justify-around overflow-x-auto">
-          <div className="w-[150px] h-[220px] bg-white border-2 rounded-md border-gray-200">
+        <div className="h-[220px] w-full   flex md:hidden items-center justify-around overflow-x-auto scrollbar-hide">
+          <div className="w-[150px] shrink-0 h-[220px] bg-white border-2 rounded-md border-gray-200">
             <img src={BAG} className="w-[100px] h-[100px] m-auto mt-4" alt="" />
             <p className="font-bolder ml-4 text-xl mt-2">$10.30</p>
             <p className="text-lg  text-gray-500 ml-4">
               Jeans bag for travelfor men
             </p>
           </div>
-          <div className="w-[150px] h-[220px] bg-white border-2 rounded-md border-gray-200">
+          <div className="w-[150px] h-[220px] shrink-0 bg-white border-2 rounded-md border-gray-200">
             <img src={BAG} className="w-[100px] h-[100px] m-auto mt-4" alt="" />
             <p className="font-bolder ml-4 text-xl mt-2">$10.30</p>
             <p className="text-lg  text-gray-500 ml-4">
               Jeans bag for travelfor men
             </p>
           </div>
-          <div className="w-[150px] h-[220px] bg-white border-2 rounded-md border-gray-200">
+          <div className="w-[150px] h-[220px] shrink-0 bg-white border-2 rounded-md border-gray-200">
             <img src={BAG} className="w-[100px] h-[100px] m-auto mt-4" alt="" />
             <p className="font-bolder ml-4 text-xl mt-2">$10.30</p>
             <p className="text-lg  text-gray-500 ml-4">
               Jeans bag for travelfor men
             </p>
           </div>
-          <div className="w-[150px] h-[220px] bg-white border-2 rounded-md border-gray-200">
+          <div className="w-[150px] h-[220px] shrink-0 bg-white border-2 rounded-md border-gray-200">
             <img src={BAG} className="w-[100px] h-[100px] m-auto mt-4" alt="" />
             <p className="font-bolder ml-4 text-xl mt-2">$10.30</p>
             <p className="text-lg  text-gray-500 ml-4">
               Jeans bag for travelfor men
             </p>
           </div>
-          <div className="w-[150px] h-[220px] bg-white border-2 rounded-md border-gray-200">
+          <div className="w-[150px] h-[220px] shrink-0 bg-white border-2 rounded-md border-gray-200">
             <img src={BAG} className="w-[100px] h-[100px] m-auto mt-4" alt="" />
             <p className="font-bolder ml-4 text-xl mt-2">$10.30</p>
             <p className="text-lg  text-gray-500 ml-4">
               Jeans bag for travelfor men
             </p>
           </div>
-          <div className="w-[150px] h-[220px] bg-white border-2 rounded-md border-gray-200">
+          <div className="w-[150px] h-[220px] shrink-0 bg-white border-2 rounded-md border-gray-200">
             <img src={BAG} className="w-[100px] h-[100px] m-auto mt-4" alt="" />
             <p className="font-bolder ml-4 text-xl mt-2">$10.30</p>
             <p className="text-lg  text-gray-500 ml-4">
