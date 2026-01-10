@@ -3,8 +3,8 @@ import { Menu, ChevronDown } from "lucide-react";
 export default function TopBar() {
   return (
     <div className="hidden md:block w-full border-y border-gray-200  bg-white  text-sm">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="h-10 flex items-center justify-between mx-6">
+      <div className="max-w-[93%] mx-auto px-4">
+        <div className="h-10 flex  items-center justify-between mx-6">
           {/* Left */}
           <div className="flex items-center ml-[-20px] gap-5 text-gray-700">
             <div className="flex items-center gap-1 cursor-pointer">
