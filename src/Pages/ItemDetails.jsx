@@ -107,17 +107,19 @@ function ItemDetails() {
             </div>
           </div>
           {/* Small */}
-          <div
-            className="block md:hidden w-[328px]  h-[350px] shrink-0 bg-cover bg-center flex items-end justify-end"
-            style={{ backgroundImage: `url(${images[current].url})` }}
-          >
-            <div className="">
-              <ArrowRightAltIcon
-                className="transition-transform rotate-z-180"
-                fontSize="large"
-                onClick={setNext}
-              />
-              <ArrowRightAltIcon fontSize="large" onClick={setPrev} />
+          <div className="bg-gray-500">
+            <div
+              className="block md:hidden w-[328px]  h-[350px] shrink-0 bg-cover bg-center flex items-end justify-end"
+              style={{ backgroundImage: `url(${images[current].url})` }}
+            >
+              <div className="">
+                <ArrowRightAltIcon
+                  className="transition-transform rotate-z-180"
+                  fontSize="large"
+                  onClick={setNext}
+                />
+                <ArrowRightAltIcon fontSize="large" onClick={setPrev} />
+              </div>
             </div>
           </div>
 
@@ -239,87 +241,109 @@ function ItemDetails() {
           </div>
         </div>
 
-
- <div className="max-w-7xl mx-auto p-4 grid grid-cols-1 md:grid-cols-4 gap-6">
-        {/* LEFT SIDE */}
-        <div className="md:col-span-3 border rounded-lg p-4">
-          {/* Tabs */}
-          <div className="flex gap-6 border-b mb-4">
-            {tabs.map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`pb-2 text-sm font-medium ${
-                  activeTab === tab
-                    ? "border-b-2 border-blue-500 text-blue-600"
-                    : "text-gray-500"
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
-
-          {/* Content */}
-          <p className="text-sm text-gray-600 mb-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-
-          {/* Table */}
-          <div className="border rounded-lg overflow-hidden mb-4">
-            {[
-              ["Model", "#8786867"],
-              ["Style", "Classic style"],
-              ["Certificate", "ISO-898921212"],
-              ["Size", "34mm x 450mm x 19mm"],
-              ["Memory", "36GB RAM"],
-            ].map(([key, value]) => (
-              <div key={key} className="flex text-sm border-b last:border-b-0">
-                <div className="w-1/3 bg-gray-50 px-3 py-2 font-medium">
-                  {key}
-                </div>
-                <div className="w-2/3 px-3 py-2 text-gray-600">{value}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Features */}
-          <ul className="space-y-2 text-sm text-gray-600">
-            <li>✔ Some great feature name here</li>
-            <li>✔ Lorem ipsum dolor sit amet, consectetur</li>
-            <li>✔ Duis aute irure dolor in reprehenderit</li>
-            <li>✔ Another cool feature</li>
-          </ul>
-        </div>
-
-        {/* RIGHT SIDE */}
-        <div className="border rounded-lg p-4">
-          <h3 className="font-semibold mb-4 text-sm">You may like</h3>
-
-          {[
-            "Men Blazers Sets Elegant Formal",
-            "Men Shirt Sleeve Polo Contrast",
-            "Apple Watch Series Space Gray",
-            "Basketball Crew Socks Long Stuff",
-            "New Summer Men's castrol T-Shirts",
-          ].map((item, i) => (
-            <div key={i} className="flex gap-3 mb-4 last:mb-0">
-              <div className="w-14 h-14 bg-gray-200 rounded"></div>
-              <div>
-                <p className="text-sm">{item}</p>
-                <p className="text-xs text-gray-500">$7.00 - $99.50</p>
-              </div>
+        <div className="w-full lg:w-[92%] hidden mx-auto p-4 md:grid grid-cols-1 md:grid-cols-4 gap-6">
+          {/* LEFT SIDE */}
+          <div className="md:col-span-3 border  border-gray-300 rounded-md p-4 bg-white">
+            {/* Tabs */}
+            <div className="flex gap-6 border-b border-gray-300 mb-4">
+              {tabs.map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`pb-2 text-sm font-medium ${
+                    activeTab === tab
+                      ? "border-b-2 border-blue-500 text-blue-600"
+                      : "text-gray-500"
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
             </div>
-          ))}
+
+            {/* Content */}
+            <p className="text-sm text-gray-600 mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+              quisquam exercitationem vel voluptas ab molestiae nisi architecto
+              quos mollitia adipisci deserunt consequuntur rerum, tenetur
+              accusantium reiciendis velit aut quasi laudantium reprehenderit
+              nemo ipsam illum illo. Et numquam eos culpa fuga! Lorem ipsum
+              dolor sit, amet consectetur adipisicing elit. Fugit accusamus
+              tempora aperiam ipsa voluptas non dolorem commodi quasi animi
+              facere, optio saepe modi nesciunt veniam.
+            </p>
+
+            {/* Table */}
+            <div className="border border-gray-300 overflow-hidden w-[567px] mb-4">
+              {[
+                ["Model", "#8786867"],
+                ["Style", "Classic style"],
+                ["Certificate", "ISO-898921212"],
+                ["Size", "34mm x 450mm x 19mm"],
+                ["Memory", "36GB RAM"],
+              ].map(([key, value]) => (
+                <div
+                  key={key}
+                  className="flex w-[567px] text-sm border-b border-b-gray-400 last:border-b-0"
+                >
+                  <div className="w-2/3 bg-gray-50 px-3 py-2 ">{key}</div>
+                  <div className="w-2/3 px-3 py-2 text-gray-600">{value}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Features */}
+            <ul className="space-y-2 text-sm text-gray-600">
+              <li>✔ Some great feature name here</li>
+              <li>✔ Lorem ipsum dolor sit amet, consectetur</li>
+              <li>✔ Duis aute irure dolor in reprehenderit</li>
+              <li>✔ Another cool feature</li>
+            </ul>
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="border border-gray-300 h-fit rounded-md p-4 bg-white">
+            <h3 className="font-semibold mb-4 text-sm">You may like</h3>
+
+            {[
+              {
+                desc: "Men Blazers Sets Elegant Formal",
+                image: shirt,
+              },
+              {
+                desc: "Men Shirt Sleeve Polo Contrast",
+                image: tShi,
+              },
+              {
+                desc: "Apple Watch Series Space Gray",
+                image: Shi,
+              },
+              {
+                desc: "Basketball Crew Socks Long Stuff",
+                image: nik,
+              },
+              {
+                desc: "New Summer Men's castrol T-Shirts",
+                image: shirt,
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex gap-3  mb-4 last:mb-0">
+                <div className="w-14 h-14 bg-white rounded border p-1 border-gray-300">
+                  <img src={item.image} className="w-full h-full" alt="" />
+                </div>
+                <div>
+                  <p className="text-sm">{item.desc}</p>
+                  <p className="text-xs text-gray-500">$7.00 - $99.50</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-
 
 
       </div>
-
-     
     </div>
   );
 }
