@@ -63,7 +63,7 @@ function RegionSuppliers() {
                     <p className='text-sm text-gray-500 leading-tight'>Shopname.ae</p>
                 </div>
               </div>
-              <div className='flex gap-2 items-center h-[36px]'>
+              <div className='flex gap-2 items-center ml-5 h-[36px]'>
                 <img src={DEN} className='w-[28px] h-[20px]' />
                 <div>
                     <p className='text-md leading-tight'>Denmark</p>

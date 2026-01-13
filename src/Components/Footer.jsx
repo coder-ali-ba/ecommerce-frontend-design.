@@ -11,8 +11,8 @@ import UAE from '../assets/5b7e05677ed6e6d0ff7b7df11d34540f89efa0eb.png'
 function Footer() {
   return (
     <>
-    <div className="w-full h-[300px] bg-white hidden md:flex ">
-      <div className="h-full w-1/4 flex flex-col justify-center gap-4 pl-12 ">
+    <div className="w-{100%]} h-[300px] bg-white hidden md:flex ">
+      <div className="h-full w-1/4 flex flex-col justify-center gap-4 pl-18 ">
         <span className="flex items-center ">
           <img src={logo} alt="" />
           <p className="text-xl font-bold text-blue-400">Brand</p>
@@ -20,7 +20,7 @@ function Footer() {
         <p>
           Best information about the company gies here but now lorem ipsum is
         </p>
-        <span>
+        <span className="text-gray-500 flex gap-2">
           <FacebookIcon />
           <TwitterIcon />
           <LinkedInIcon />
@@ -40,45 +40,45 @@ function Footer() {
           </thead>
 
           <tbody className="text-gray-600">
-            <tr className="hover:text-blue-600 cursor-pointer">
-              <td className="px-6 py-2">sd</td>
-              <td className="px-6 py-2">sd</td>
-              <td className="px-6 py-2">dsd</td>
-              <td className="px-6 py-2">sdsd</td>
+            <tr className="">
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">dsd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sdsd</td>
             </tr>
 
-            <tr className="hover:text-blue-600 cursor-pointer">
-              <td className="px-6 py-2">sd</td>
-              <td className="px-6 py-2">sd</td>
-              <td className="px-6 py-2">dsd</td>
-              <td className="px-6 py-2">sdsd</td>
+            <tr className=" cursor-pointer">
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">dsd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sdsd</td>
             </tr>
 
-            <tr className="hover:text-blue-600 cursor-pointer">
-              <td className="px-6 py-2">sd</td>
-              <td className="px-6 py-2">sd</td>
-              <td className="px-6 py-2">dsd</td>
-              <td className="px-6 py-2">sdsd</td>
+            <tr className=" cursor-pointer">
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">dsd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sdsd</td>
             </tr>
 
-            <tr className="hover:text-blue-600 cursor-pointer">
-              <td className="px-6 py-2">sd</td>
-              <td className="px-6 py-2">sd</td>
-              <td className="px-6 py-2">dsd</td>
-              <td className="px-6 py-2">sdsd</td>
+            <tr className="cursor-pointer">
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">dsd</td>
+              <td className="px-6 py-2 hover:text-blue-600 cursor-pointer">sdsd</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div className="h-full  w-1/4 pt-19">
         <p className="font-bold">Get App</p>
-        <button className="bg-[#1C1C1C] leading-tight flex text-white py-1 px-3 rounded-md gap-1 mt-3">
+        <button className="bg-[#1C1C1C] leading-tight flex text-white py-1 px-3 rounded-md gap-1 mt-3 cursor-pointer">
           <AppleIcon fontSize="large"/>
           <div>
             <p className="leading-tight text-xs">Download on the</p>App Store
           </div>
         </button>
-        <button className="bg-[#1C1C1C] leading-tight flex text-white py-1 px-3 rounded-md gap-1 mt-3">
+        <button className="bg-[#1C1C1C] leading-tight flex text-white py-1 px-3 rounded-md gap-1 mt-3 cursor-pointer">
           <AppleIcon fontSize="large"/>
           <div>
             <p className="leading-tight text-xs">Download on the</p>Google Play

@@ -6,7 +6,7 @@ import { Heart } from 'lucide-react'
 function ListView() {
   return (
     <>
-    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+    <Link to="/itemdetails" className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
       
       {/* Image */}
       <img
@@ -44,10 +44,10 @@ function ListView() {
       <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
         <Heart size={18} />
       </button>
-    </div>
+    </Link>
 
 
-    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+    <Link to="/itemdetails" className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
       
       {/* Image */}
       <img
@@ -85,10 +85,10 @@ function ListView() {
       <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
         <Heart size={18} />
       </button>
-    </div>
+    </Link>
 
 
-    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+    <Link to="/itemdetails" className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
       
       {/* Image */}
       <img
@@ -126,10 +126,10 @@ function ListView() {
       <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
         <Heart size={18} />
       </button>
-    </div>
+    </Link>
 
 
-    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+    <Link to="/itemdetails" className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
       
       {/* Image */}
       <img
@@ -167,10 +167,10 @@ function ListView() {
       <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
         <Heart size={18} />
       </button>
-    </div>
+    </Link>
 
 
-    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+    <Link to="/itemdetails" className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
       
       {/* Image */}
       <img
@@ -208,10 +208,10 @@ function ListView() {
       <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
         <Heart size={18} />
       </button>
-    </div>
+    </Link>
 
 
-    <div className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
+    <Link to="/itemdetails" className="w-full md:h-[200px]  mb-2 mx-auto bg-white border border-gray-300 rounded-md p-1 flex gap-3 items-center shadow-sm">
       
       {/* Image */}
       <img
@@ -249,7 +249,7 @@ function ListView() {
       <button className="h-full text-gray-400 hover:text-red-500 hidden md:flex items-start">
         <Heart size={18} />
       </button>
-    </div>
+    </Link>
 
     
 

@@ -39,6 +39,7 @@ import POCK from '../assets/3e0d988a895e1e83befccaeafc962783f0de80c5.png'
 import BAG from '../assets/deea14d78e68b15c28eb29234224b8b2f71d5eb5.png'
 import JEANS from '../assets/8ef134a2fbdc1fec81bd703736016e62fddab16b.png'
 import HEAD from '../assets/37220adadb935c4b51e951193ddd1064f61e7b77.png'
+import { Link } from "react-router-dom";
 
 
 
@@ -165,31 +166,31 @@ function HomePage() {
 
             {/* RIGHT SECTION */}
             <div className="flex h=[300px]   md:mt-0 md:h-full overflow-x-auto scrollbar-hide">
-              <div className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
+              <Link to="/list" className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
                 <img src={watch} className="w-[101px] h-[121px]" alt="" />
                 <p>Smart watches</p>
                 <span className="rounded-2xl bg-[#FFE3E3] px-4 py-1">-25%</span>
-              </div>
-              <div className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
+              </Link>
+              <Link to="/list" className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
                 <img src={laptop} className="w-[101px] h-[121px]" alt="" />
                 <p>Laptops</p>
                 <span className="rounded-2xl bg-[#FFE3E3] px-4 py-1">-25%</span>
-              </div>
-              <div className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
+              </Link>
+              <Link to="/list" className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
                 <img src={camera} className="w-[101px] h-[121px]" alt="" />
                 <p>GoPro Cameras</p>
                 <span className="rounded-2xl bg-[#FFE3E3] px-4 py-1">-25%</span>
-              </div>
-              <div className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
+              </Link>
+              <Link to="/list" className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
                 <img src={headPhone} className="w-[101px] h-[121px]" alt="" />
                 <p>Headphones</p>
                 <span className="rounded-2xl bg-[#FFE3E3] px-4 py-1">-25%</span>
-              </div>
-              <div className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
+              </Link>
+              <Link to="/list" className="w-[140px] md:w-[188px] h-[300px] md:h-full flex-none border border-gray-300 flex flex-col gap-3 pt-4 items-center">
                 <img src={mob} className="w-[101px] h-[121px]" alt="" />
                 <p>Canon Cameras</p>
                 <span className="rounded-2xl bg-[#FFE3E3] px-4 py-1">-25%</span>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

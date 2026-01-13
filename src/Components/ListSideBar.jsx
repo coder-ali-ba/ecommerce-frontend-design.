@@ -242,7 +242,7 @@ function ListSideBar({
                 className="absolute top-1/2 h-1 bg-blue-600 rounded -translate-y-1/2 "
                 style={{
                   left: `${(min / MAX_LIMIT) * 100}%`,
-                  right: `${100 - (max / MAX_LIMIT) * 100}%`,
+                  right: `${100 - (max / MAX_LIMIT) * 0}%`,
                 }}
               />
 

@@ -1,11 +1,12 @@
 import React from "react";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import mobile from "../assets/01ad73c0a2d288ce5bd52ddfac2945120df5102b.png";
+import { Link } from "react-router-dom";
 
 function GridView() {
   return (
     <div className="flex gap-9 justify-center flex-wrap mt-2 mb-8">
-      <div className="max-h-[405px] max-w-[295px] border border-gray-500 rounded-md bg-white">
+      <Link to="/itemdetails" className="max-h-[405px] max-w-[295px] border border-gray-500 rounded-md bg-white">
         <img src={mobile} className="w-[80%] mt-8 ml-8 h-[60%]" alt="" />
         <div className="w-full flex justify-between p-3">
           <div>
@@ -24,7 +25,7 @@ function GridView() {
             <FavoriteBorderIcon />
           </div>
         </div>
-      </div>
+      </Link>
 
       <div className="max-h-[405px] max-w-[295px] border border-gray-500 rounded-md bg-white">
         <img src={mobile} className="w-[80%] mt-8 ml-8 h-[60%]" alt="" />

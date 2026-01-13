@@ -13,6 +13,8 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import jer from "../assets/b8478718292fe0d58fea5b0a42c117e22f308f6e.png";
 import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
+import Footer from "../Components/Footer";
+import DiscountBanner from "../Components/DiscountBanner"
 
 function ItemDetails() {
   const [imageUrl, setImageUrl] = useState("");
@@ -49,6 +51,45 @@ function ItemDetails() {
     {
       id: "1",
       url: shirt,
+    },
+  ];
+
+  const products = [
+    {
+      id: 1,
+      name: "Xiaomi Redmi 8 Original",
+      price: "$32.00 - $40.00",
+      img: shirt,
+    },
+    {
+      id: 2,
+      name: "Xiaomi Redmi 8 Original",
+      price: "$32.00 - $40.00",
+      img: tShi
+    },
+    {
+      id: 3,
+      name: "Xiaomi Redmi 8 Original",
+      price: "$32.00 - $40.00",
+      img: nik
+    },
+    {
+      id: 4,
+      name: "Xiaomi Redmi 8 Original",
+      price: "$32.00 - $40.00",
+      img: Shi
+    },
+    {
+      id: 5,
+      name: "Xiaomi Redmi 8 Original",
+      price: "$32.00 - $40.00",
+      img: shirt
+    },
+    {
+      id: 6,
+      name: "Xiaomi Redmi 8 Original",
+      price: "$32.00 - $40.00",
+      img: tShi
     },
   ];
 
@@ -109,7 +150,7 @@ function ItemDetails() {
           {/* Small */}
           <div className="bg-gray-500">
             <div
-              className="block md:hidden w-[328px]  h-[350px] shrink-0 bg-cover bg-center flex items-end justify-end"
+              className="block md:hidden w-[328px]  h-[350px] shrink-0 bg-cover bg-center flex items-end justify-end "
               style={{ backgroundImage: `url(${images[current].url})` }}
             >
               <div className="">
@@ -342,8 +383,38 @@ function ItemDetails() {
           </div>
         </div>
 
+        <div className="w-full mb-4 lg:w-[90%] border border-gray-400 rounded-md p-4 bg-white">
+          {/* Heading */}
+          <h2 className="font-bold text-xl text-gray-800 mb-4">Related products</h2>
 
+          {/* Products */}
+          <div className="flex gap-4 justify-between overflow-x-auto scrollbar-hide">
+            {products.map((item) => (
+              <div key={item.id} className="min-w-[150px] flex-shrink-0">
+                {/* Image box */}
+                <div className="bg-gray-100 w-full rounded-md h-36 flex items-center justify-center mb-2">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="h-24 object-contain"
+                  />
+                </div>
+
+                {/* Text */}
+                <p className="text-sm text-gray-800 leading-tight">
+                  {item.name}
+                </p>
+                <p className="text-sm text-blue-600 mt-1">{item.price}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="w-[90%]">
+         <DiscountBanner />
+        </div>
       </div>
+        <Footer />
     </div>
   );
 }
